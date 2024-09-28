@@ -31,11 +31,11 @@ function get_image_list($path) {
     foreach($files as $f){
         $ext = strtolower(pathinfo($path . $f, PATHINFO_EXTENSION));
         if (in_array($ext, [ "jpg" , "jpeg" , "png" , "gif" , "svg" , "webp"]) ){
-            //print($f);
             $file = new SplFileInfo($path . $f);
-            $modify_date = date('Y-m-d H:i:s', $file->getMTime());
+            $modify_date = date('Y-m-d\TH:i:sP', $file->getMTime());
+            // <lastmod>2024-05-28T14:06:42+03:00</lastmod>
+            // <lastmod>2024-09-28CEST10:55:09+02:00</lastmod>
             $filesize = $file->getSize();
-
             $image_file_arr[] = [
                 "filename" => $f ,
                 "size" => $filesize ,
