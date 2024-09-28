@@ -9,7 +9,8 @@ $domain = $_SERVER['SERVER_NAME']; // определим домен
 $image_file_arr = get_image_list($path);
 
 // Сформируем sitemap.xml
-$xml = new SimpleXMLElement('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>');
+$xml = new SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?>' 
+    .'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>');
 
 foreach ($image_file_arr as $i) {
     $url = $xml->addChild("url");
