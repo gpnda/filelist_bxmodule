@@ -26,6 +26,8 @@ Class img2sitemap extends CModule
 		$this->MODULE_DESCRIPTION = "Модуль создает Sitemap XML, и перечисляет в нем все картинки, находящиеся в заданной папке на сервере.";
 	}
 
+
+
 	function InstallDB($install_wizard = true)
 	{
 		RegisterModule("img2sitemap");
