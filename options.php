@@ -6,7 +6,7 @@ Loc::loadMessages(__FILE__);
 
 $arAllOptions = array(
 	array("path",       "Путь к папке в файловой системе",  "./img_for_test/",  array("text", 50)),
-	array("uri",        "URI этой-же папки",                "/upload/img/",     array("text", 50)),
+	array("uri",        "URI этой-же папки",                "/local/modules/img2sitemap/img_for_test/",     array("text", 50)),
     array("protocol",   "Протокол: 'https://'",             "https://",         array("text", 10)),
 );
 
@@ -14,7 +14,7 @@ $arAllOptions = array(
 // Дефолтные значения опций
 $img2sitemap_default_option = array(
 	"path" => "./img_for_test/",
-	"uri" => "/upload/img/",
+	"uri" => "/local/modules/img2sitemap/img_for_test/",
 	"protocol" => "https://",
 );
 $arDefaultValues['default'] = $img2sitemap_default_option;
@@ -53,6 +53,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && ($_POST['Update'] || $_POST['Apply'] ||
 
 <h2>img2sitemap</h2>
 <p>Модуль позволяет создавать sitemap.xml перечисляющий все файлы картинок, размещенные в конкретной папке на сервере.</p>
+<p>Для проверки - есть две папки с разным содержимым: <b>./img_for_test/</b> и <b>./img_for_test2/</b></p>
 
 
 

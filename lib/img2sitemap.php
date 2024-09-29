@@ -18,6 +18,11 @@ class Img2Sitemap {
 		$protocol = "https://"; // протокол http/https
 		$domain = $_SERVER['SERVER_NAME']; // определим домен
 
+
+        $path = \COption::GetOptionString("img2sitemap", "path");
+        $uri = \COption::GetOptionString("img2sitemap", "uri");
+        $protocol = \COption::GetOptionString("img2sitemap", "protocol");
+
 		// Получим список картинок
 		$image_file_arr = self::get_image_list($path);
 

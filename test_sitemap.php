@@ -9,7 +9,4 @@ use Gpnda\Img2Sitemap\Img2Sitemap;
 
 
 
-
-
-
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php"); //если ругается на него php, то комментим и дальше пользуемся
